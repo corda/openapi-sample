@@ -37,7 +37,7 @@ Find more details at: https://github.com/OpenAPITools/openapi-generator
 npm install @openapitools/openapi-generator-cli -g
 ```
 ### Download and Start the Cordapp. 
-For this Demo, we are using a modified version of my bootcamp Cordapp. Links:https://github.com/peterli-r3/bootcamp-openapi
+For this Demo, we are using a modified version of my bootcamp Cordapp. Links:https://github.com/corda/bootcamp-openapi
 Commands to build & start your nodes:
 ```
 git clone https://github.com/corda/bootcamp-openapi.git
