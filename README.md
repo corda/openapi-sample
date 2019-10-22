@@ -94,7 +94,7 @@ INFO  io.bluebank.braid.corda.BraidServer - Braid server started successfully on
 Download the React front-end at https://github.com/corda/openapi-sample.git
 ```
 git clone https://github.com/corda/openapi-sample.git
-cd react_openapi
+cd openapi-sample
 npm install
 ```
 At the `src/code-gen/io.generated.api` folder, it sits the pre-generated APIs.
