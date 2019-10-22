@@ -41,7 +41,7 @@ For this Demo, we are using a modified version of my bootcamp Cordapp. Links:htt
 Commands to build & start your nodes:
 ```
 git clone https://github.com/corda/bootcamp-openapi.git
-cd bootcamp-opemapi
+cd bootcamp-openapi
 ./gradlew deployNodes
 ./build/nodes/runnodes
 ```
