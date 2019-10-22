@@ -1,4 +1,4 @@
-# Corda_OpenAPI sample using project Braid
+# openapi-sample
 
 ## Introduction
 
