@@ -115,7 +115,7 @@ api.cordapps(callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:10200/api/rest*
+All URIs are relative to *http://localhost:9004/api/rest*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -123,6 +123,7 @@ Class | Method | HTTP request | Description
 *OpenapiJsClient.CordappsApi* | [**cordappsBootcampOpenapiFlowsBootcampGetAllTokensFlow**](docs/CordappsApi.md#cordappsBootcampOpenapiFlowsBootcampGetAllTokensFlow) | **POST** /cordapps/bootcamp-openapi/flows/bootcamp.GetAllTokensFlow | 
 *OpenapiJsClient.CordappsApi* | [**cordappsBootcampOpenapiFlowsBootcampTokenIssueFlowInitiator**](docs/CordappsApi.md#cordappsBootcampOpenapiFlowsBootcampTokenIssueFlowInitiator) | **POST** /cordapps/bootcamp-openapi/flows/bootcamp.TokenIssueFlowInitiator | 
 *OpenapiJsClient.CordappsApi* | [**cordappsCordappFlows**](docs/CordappsApi.md#cordappsCordappFlows) | **GET** /cordapps/{cordapp}/flows | 
+*OpenapiJsClient.CordappsApi* | [**cordappsProgressTracker**](docs/CordappsApi.md#cordappsProgressTracker) | **GET** /cordapps/progress-tracker | 
 *OpenapiJsClient.NetworkApi* | [**networkNodes**](docs/NetworkApi.md#networkNodes) | **GET** /network/nodes | 
 *OpenapiJsClient.NetworkApi* | [**networkNodesSelf**](docs/NetworkApi.md#networkNodesSelf) | **GET** /network/nodes/self | 
 *OpenapiJsClient.NetworkApi* | [**networkNotaries**](docs/NetworkApi.md#networkNotaries) | **GET** /network/notaries | 
@@ -135,8 +136,10 @@ Class | Method | HTTP request | Description
  - [OpenapiJsClient.BootcampTokenState](docs/BootcampTokenState.md)
  - [OpenapiJsClient.GeneratedBootcampTokenIssueFlowInitiatorPayload](docs/GeneratedBootcampTokenIssueFlowInitiatorPayload.md)
  - [OpenapiJsClient.InvocationError](docs/InvocationError.md)
+ - [OpenapiJsClient.IoBluebankBraidCordaServerProgressProgressNotification](docs/IoBluebankBraidCordaServerProgressProgressNotification.md)
  - [OpenapiJsClient.IoBluebankBraidCordaServicesSimpleNodeInfo](docs/IoBluebankBraidCordaServicesSimpleNodeInfo.md)
  - [OpenapiJsClient.IoBluebankBraidCordaServicesVaultVaultQuery](docs/IoBluebankBraidCordaServicesVaultVaultQuery.md)
+ - [OpenapiJsClient.IoVertxExtAuthUser](docs/IoVertxExtAuthUser.md)
  - [OpenapiJsClient.NetCordaCoreContextActor](docs/NetCordaCoreContextActor.md)
  - [OpenapiJsClient.NetCordaCoreContextActorId](docs/NetCordaCoreContextActorId.md)
  - [OpenapiJsClient.NetCordaCoreContextAuthServiceId](docs/NetCordaCoreContextAuthServiceId.md)
@@ -151,17 +154,14 @@ Class | Method | HTTP request | Description
  - [OpenapiJsClient.NetCordaCoreContractsAmountTransfer](docs/NetCordaCoreContractsAmountTransfer.md)
  - [OpenapiJsClient.NetCordaCoreContractsCommandObject](docs/NetCordaCoreContractsCommandObject.md)
  - [OpenapiJsClient.NetCordaCoreContractsContractState](docs/NetCordaCoreContractsContractState.md)
- - [OpenapiJsClient.NetCordaCoreContractsLinearPointer](docs/NetCordaCoreContractsLinearPointer.md)
  - [OpenapiJsClient.NetCordaCoreContractsPrivacySalt](docs/NetCordaCoreContractsPrivacySalt.md)
  - [OpenapiJsClient.NetCordaCoreContractsScheduledStateRef](docs/NetCordaCoreContractsScheduledStateRef.md)
  - [OpenapiJsClient.NetCordaCoreContractsStateAndRefNetCordaCoreContractsContractState](docs/NetCordaCoreContractsStateAndRefNetCordaCoreContractsContractState.md)
- - [OpenapiJsClient.NetCordaCoreContractsStatePointer](docs/NetCordaCoreContractsStatePointer.md)
  - [OpenapiJsClient.NetCordaCoreContractsStateRef](docs/NetCordaCoreContractsStateRef.md)
- - [OpenapiJsClient.NetCordaCoreContractsStaticPointer](docs/NetCordaCoreContractsStaticPointer.md)
  - [OpenapiJsClient.NetCordaCoreContractsTimeWindow](docs/NetCordaCoreContractsTimeWindow.md)
  - [OpenapiJsClient.NetCordaCoreContractsTransactionState](docs/NetCordaCoreContractsTransactionState.md)
  - [OpenapiJsClient.NetCordaCoreContractsTransactionStateNetCordaCoreContractsContractState](docs/NetCordaCoreContractsTransactionStateNetCordaCoreContractsContractState.md)
- - [OpenapiJsClient.NetCordaCoreContractsUniqueIdentifier](docs/NetCordaCoreContractsUniqueIdentifier.md)
+ - [OpenapiJsClient.NetCordaCoreCordappCordappInfo](docs/NetCordaCoreCordappCordappInfo.md)
  - [OpenapiJsClient.NetCordaCoreCryptoDigitalSignature](docs/NetCordaCoreCryptoDigitalSignature.md)
  - [OpenapiJsClient.NetCordaCoreCryptoPartialMerkleTree](docs/NetCordaCoreCryptoPartialMerkleTree.md)
  - [OpenapiJsClient.NetCordaCoreCryptoSignatureMetadata](docs/NetCordaCoreCryptoSignatureMetadata.md)
@@ -169,6 +169,7 @@ Class | Method | HTTP request | Description
  - [OpenapiJsClient.NetCordaCoreIdentityAbstractParty](docs/NetCordaCoreIdentityAbstractParty.md)
  - [OpenapiJsClient.NetCordaCoreIdentityParty](docs/NetCordaCoreIdentityParty.md)
  - [OpenapiJsClient.NetCordaCoreIdentityPartyAndCertificate](docs/NetCordaCoreIdentityPartyAndCertificate.md)
+ - [OpenapiJsClient.NetCordaCoreNodeNodeDiagnosticInfo](docs/NetCordaCoreNodeNodeDiagnosticInfo.md)
  - [OpenapiJsClient.NetCordaCoreNodeNodeInfo](docs/NetCordaCoreNodeNodeInfo.md)
  - [OpenapiJsClient.NetCordaCoreNodeServicesNetworkMapCacheMapChange](docs/NetCordaCoreNodeServicesNetworkMapCacheMapChange.md)
  - [OpenapiJsClient.NetCordaCoreNodeServicesNetworkMapCacheMapChangeAdded](docs/NetCordaCoreNodeServicesNetworkMapCacheMapChangeAdded.md)

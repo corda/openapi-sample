@@ -74,11 +74,17 @@ class NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf 
             if (data.hasOwnProperty('relevancyStatus')) {
                 obj['relevancyStatus'] = ApiClient.convertToType(data['relevancyStatus'], 'String');
             }
+            if (data.hasOwnProperty('exactParticipants')) {
+                obj['exactParticipants'] = ApiClient.convertToType(data['exactParticipants'], [NetCordaCoreIdentityAbstractParty]);
+            }
             if (data.hasOwnProperty('constraintTypes')) {
                 obj['constraintTypes'] = ApiClient.convertToType(data['constraintTypes'], ['String']);
             }
             if (data.hasOwnProperty('constraints')) {
                 obj['constraints'] = ApiClient.convertToType(data['constraints'], [NetCordaCoreNodeServicesVaultConstraintInfo]);
+            }
+            if (data.hasOwnProperty('externalIds')) {
+                obj['externalIds'] = ApiClient.convertToType(data['externalIds'], ['String']);
             }
         }
         return obj;
@@ -128,6 +134,11 @@ NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf.protot
 NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf.prototype['relevancyStatus'] = undefined;
 
 /**
+ * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} exactParticipants
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf.prototype['exactParticipants'] = undefined;
+
+/**
  * @member {Array.<module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf.ConstraintTypesEnum>} constraintTypes
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf.prototype['constraintTypes'] = undefined;
@@ -136,6 +147,11 @@ NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf.protot
  * @member {Array.<module:io.generated.model/NetCordaCoreNodeServicesVaultConstraintInfo>} constraints
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf.prototype['constraints'] = undefined;
+
+/**
+ * @member {Array.<String>} externalIds
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf.prototype['externalIds'] = undefined;
 
 
 

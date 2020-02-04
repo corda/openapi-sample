@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import InvocationError from '../io.generated.model/InvocationError';
 import IoBluebankBraidCordaServicesVaultVaultQuery from '../io.generated.model/IoBluebankBraidCordaServicesVaultVaultQuery';
+import IoVertxExtAuthUser from '../io.generated.model/IoVertxExtAuthUser';
 import NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState from '../io.generated.model/NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState';
 
 /**
@@ -45,6 +46,7 @@ export default class VaultApi {
      */
 
     /**
+     * Queries the vault for contract states of the supplied type
      * @param {Object} opts Optional parameters
      * @param {String} opts.contractStateType 
      * @param {module:io.generated.api/VaultApi~vaultVaultQueryCallback} callback The callback function, accepting three arguments: error, data, response
@@ -84,20 +86,25 @@ export default class VaultApi {
      */
 
     /**
-     * @param {module:io.generated.model/IoBluebankBraidCordaServicesVaultVaultQuery} ioBluebankBraidCordaServicesVaultVaultQuery vault
+     * Queries the vault
+     * @param {module:io.generated.model/IoVertxExtAuthUser} ioVertxExtAuthUser user
+     * @param {Object} opts Optional parameters
+     * @param {module:io.generated.model/IoBluebankBraidCordaServicesVaultVaultQuery} opts.vault 
      * @param {module:io.generated.api/VaultApi~vaultVaultQueryByCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:io.generated.model/NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState}
      */
-    vaultVaultQueryBy(ioBluebankBraidCordaServicesVaultVaultQuery, callback) {
-      let postBody = ioBluebankBraidCordaServicesVaultVaultQuery;
-      // verify the required parameter 'ioBluebankBraidCordaServicesVaultVaultQuery' is set
-      if (ioBluebankBraidCordaServicesVaultVaultQuery === undefined || ioBluebankBraidCordaServicesVaultVaultQuery === null) {
-        throw new Error("Missing the required parameter 'ioBluebankBraidCordaServicesVaultVaultQuery' when calling vaultVaultQueryBy");
+    vaultVaultQueryBy(ioVertxExtAuthUser, opts, callback) {
+      opts = opts || {};
+      let postBody = ioVertxExtAuthUser;
+      // verify the required parameter 'ioVertxExtAuthUser' is set
+      if (ioVertxExtAuthUser === undefined || ioVertxExtAuthUser === null) {
+        throw new Error("Missing the required parameter 'ioVertxExtAuthUser' when calling vaultVaultQueryBy");
       }
 
       let pathParams = {
       };
       let queryParams = {
+        'vault': opts['vault']
       };
       let headerParams = {
       };

@@ -1,6 +1,6 @@
 # OpenapiJsClient.NetworkApi
 
-All URIs are relative to *http://localhost:10200/api/rest*
+All URIs are relative to *http://localhost:9004/api/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,6 +15,8 @@ Method | HTTP request | Description
 > [IoBluebankBraidCordaServicesSimpleNodeInfo] networkNodes(opts)
 
 
+
+Retrieves all nodes if neither query parameter is supplied. Otherwise returns a list of one node matching the supplied query parameter.
 
 ### Example
 
@@ -62,6 +64,8 @@ No authorization required
 > IoBluebankBraidCordaServicesSimpleNodeInfo networkNodesSelf()
 
 
+
+Retrieves all nodes if neither query parameter is supplied. Otherwise returns a list of one node matching the supplied query parameter.
 
 ### Example
 

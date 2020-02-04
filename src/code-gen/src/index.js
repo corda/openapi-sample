@@ -16,8 +16,10 @@ import ApiClient from './ApiClient';
 import BootcampTokenState from './io.generated.model/BootcampTokenState';
 import GeneratedBootcampTokenIssueFlowInitiatorPayload from './io.generated.model/GeneratedBootcampTokenIssueFlowInitiatorPayload';
 import InvocationError from './io.generated.model/InvocationError';
+import IoBluebankBraidCordaServerProgressProgressNotification from './io.generated.model/IoBluebankBraidCordaServerProgressProgressNotification';
 import IoBluebankBraidCordaServicesSimpleNodeInfo from './io.generated.model/IoBluebankBraidCordaServicesSimpleNodeInfo';
 import IoBluebankBraidCordaServicesVaultVaultQuery from './io.generated.model/IoBluebankBraidCordaServicesVaultVaultQuery';
+import IoVertxExtAuthUser from './io.generated.model/IoVertxExtAuthUser';
 import NetCordaCoreContextActor from './io.generated.model/NetCordaCoreContextActor';
 import NetCordaCoreContextActorId from './io.generated.model/NetCordaCoreContextActorId';
 import NetCordaCoreContextAuthServiceId from './io.generated.model/NetCordaCoreContextAuthServiceId';
@@ -32,17 +34,14 @@ import NetCordaCoreContextTraceSessionId from './io.generated.model/NetCordaCore
 import NetCordaCoreContractsAmountTransfer from './io.generated.model/NetCordaCoreContractsAmountTransfer';
 import NetCordaCoreContractsCommandObject from './io.generated.model/NetCordaCoreContractsCommandObject';
 import NetCordaCoreContractsContractState from './io.generated.model/NetCordaCoreContractsContractState';
-import NetCordaCoreContractsLinearPointer from './io.generated.model/NetCordaCoreContractsLinearPointer';
 import NetCordaCoreContractsPrivacySalt from './io.generated.model/NetCordaCoreContractsPrivacySalt';
 import NetCordaCoreContractsScheduledStateRef from './io.generated.model/NetCordaCoreContractsScheduledStateRef';
 import NetCordaCoreContractsStateAndRefNetCordaCoreContractsContractState from './io.generated.model/NetCordaCoreContractsStateAndRefNetCordaCoreContractsContractState';
-import NetCordaCoreContractsStatePointer from './io.generated.model/NetCordaCoreContractsStatePointer';
 import NetCordaCoreContractsStateRef from './io.generated.model/NetCordaCoreContractsStateRef';
-import NetCordaCoreContractsStaticPointer from './io.generated.model/NetCordaCoreContractsStaticPointer';
 import NetCordaCoreContractsTimeWindow from './io.generated.model/NetCordaCoreContractsTimeWindow';
 import NetCordaCoreContractsTransactionState from './io.generated.model/NetCordaCoreContractsTransactionState';
 import NetCordaCoreContractsTransactionStateNetCordaCoreContractsContractState from './io.generated.model/NetCordaCoreContractsTransactionStateNetCordaCoreContractsContractState';
-import NetCordaCoreContractsUniqueIdentifier from './io.generated.model/NetCordaCoreContractsUniqueIdentifier';
+import NetCordaCoreCordappCordappInfo from './io.generated.model/NetCordaCoreCordappCordappInfo';
 import NetCordaCoreCryptoDigitalSignature from './io.generated.model/NetCordaCoreCryptoDigitalSignature';
 import NetCordaCoreCryptoPartialMerkleTree from './io.generated.model/NetCordaCoreCryptoPartialMerkleTree';
 import NetCordaCoreCryptoSignatureMetadata from './io.generated.model/NetCordaCoreCryptoSignatureMetadata';
@@ -50,68 +49,69 @@ import NetCordaCoreCryptoTransactionSignature from './io.generated.model/NetCord
 import NetCordaCoreIdentityAbstractParty from './io.generated.model/NetCordaCoreIdentityAbstractParty';
 import NetCordaCoreIdentityParty from './io.generated.model/NetCordaCoreIdentityParty';
 import NetCordaCoreIdentityPartyAndCertificate from './io.generated.model/NetCordaCoreIdentityPartyAndCertificate';
+import NetCordaCoreNodeNodeDiagnosticInfo from './io.generated.model/NetCordaCoreNodeNodeDiagnosticInfo';
 import NetCordaCoreNodeNodeInfo from './io.generated.model/NetCordaCoreNodeNodeInfo';
 import NetCordaCoreNodeServicesNetworkMapCacheMapChange from './io.generated.model/NetCordaCoreNodeServicesNetworkMapCacheMapChange';
 import NetCordaCoreNodeServicesNetworkMapCacheMapChangeAdded from './io.generated.model/NetCordaCoreNodeServicesNetworkMapCacheMapChangeAdded';
 import NetCordaCoreNodeServicesNetworkMapCacheMapChangeModified from './io.generated.model/NetCordaCoreNodeServicesNetworkMapCacheMapChangeModified';
 import NetCordaCoreNodeServicesNetworkMapCacheMapChangeRemoved from './io.generated.model/NetCordaCoreNodeServicesNetworkMapCacheMapChangeRemoved';
-// import NetCordaCoreNodeServicesVault from './io.generated.model/NetCordaCoreNodeServicesVault';
-// import NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition';
-// import NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria';
-// import NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition';
-// import NetCordaCoreNodeServicesVaultAttachmentSort from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentSort';
-// import NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn';
-// import NetCordaCoreNodeServicesVaultColumn from './io.generated.model/NetCordaCoreNodeServicesVaultColumn';
-// import NetCordaCoreNodeServicesVaultColumnObjectObject from './io.generated.model/NetCordaCoreNodeServicesVaultColumnObjectObject';
-// import NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction';
-// import NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf';
-// import NetCordaCoreNodeServicesVaultColumnPredicateBetween from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBetween';
-// import NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf';
-// import NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison';
-// import NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf';
-// import NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression';
-// import NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf';
-// import NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison';
-// import NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf';
-// import NetCordaCoreNodeServicesVaultColumnPredicateLikeness from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateLikeness';
-// import NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf';
-// import NetCordaCoreNodeServicesVaultColumnPredicateNullExpression from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateNullExpression';
-// import NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf';
-// import NetCordaCoreNodeServicesVaultConstraintInfo from './io.generated.model/NetCordaCoreNodeServicesVaultConstraintInfo';
-// import NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression';
-// import NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf';
-// import NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical';
-// import NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf';
-// import NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression';
-// import NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf';
-// import NetCordaCoreNodeServicesVaultCriteriaExpressionNot from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionNot';
-// import NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf';
-// import NetCordaCoreNodeServicesVaultPage from './io.generated.model/NetCordaCoreNodeServicesVaultPage';
-// import NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState from './io.generated.model/NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState';
-// import NetCordaCoreNodeServicesVaultPageSpecification from './io.generated.model/NetCordaCoreNodeServicesVaultPageSpecification';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria';
-// import NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf';
-// import NetCordaCoreNodeServicesVaultSort from './io.generated.model/NetCordaCoreNodeServicesVaultSort';
-// import NetCordaCoreNodeServicesVaultSortAttributeCustom from './io.generated.model/NetCordaCoreNodeServicesVaultSortAttributeCustom';
-// import NetCordaCoreNodeServicesVaultSortAttributeStandard from './io.generated.model/NetCordaCoreNodeServicesVaultSortAttributeStandard';
-// import NetCordaCoreNodeServicesVaultSortSortColumn from './io.generated.model/NetCordaCoreNodeServicesVaultSortSortColumn';
-// import NetCordaCoreNodeServicesVaultStateMetadata from './io.generated.model/NetCordaCoreNodeServicesVaultStateMetadata';
-// import NetCordaCoreNodeServicesVaultUpdate from './io.generated.model/NetCordaCoreNodeServicesVaultUpdate';
+//import NetCordaCoreNodeServicesVault from './io.generated.model/NetCordaCoreNodeServicesVault';
+//import NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition';
+//import NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria';
+//import NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition';
+//import NetCordaCoreNodeServicesVaultAttachmentSort from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentSort';
+//import NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn from './io.generated.model/NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn';
+//import NetCordaCoreNodeServicesVaultColumn from './io.generated.model/NetCordaCoreNodeServicesVaultColumn';
+//import NetCordaCoreNodeServicesVaultColumnObjectObject from './io.generated.model/NetCordaCoreNodeServicesVaultColumnObjectObject';
+//import NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction';
+//import NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf';
+//import NetCordaCoreNodeServicesVaultColumnPredicateBetween from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBetween';
+//import NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf';
+//import NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison';
+//import NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf';
+//import NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression';
+//import NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf';
+//import NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison';
+//import NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf';
+//import NetCordaCoreNodeServicesVaultColumnPredicateLikeness from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateLikeness';
+//import NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf';
+//import NetCordaCoreNodeServicesVaultColumnPredicateNullExpression from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateNullExpression';
+//import NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf';
+//import NetCordaCoreNodeServicesVaultConstraintInfo from './io.generated.model/NetCordaCoreNodeServicesVaultConstraintInfo';
+//import NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression';
+//import NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf';
+//import NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical';
+//import NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf';
+//import NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression';
+//import NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf';
+//import NetCordaCoreNodeServicesVaultCriteriaExpressionNot from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionNot';
+//import NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf';
+//import NetCordaCoreNodeServicesVaultPage from './io.generated.model/NetCordaCoreNodeServicesVaultPage';
+//import NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState from './io.generated.model/NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState';
+//import NetCordaCoreNodeServicesVaultPageSpecification from './io.generated.model/NetCordaCoreNodeServicesVaultPageSpecification';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria';
+//import NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf from './io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf';
+//import NetCordaCoreNodeServicesVaultSort from './io.generated.model/NetCordaCoreNodeServicesVaultSort';
+//import NetCordaCoreNodeServicesVaultSortAttributeCustom from './io.generated.model/NetCordaCoreNodeServicesVaultSortAttributeCustom';
+//import NetCordaCoreNodeServicesVaultSortAttributeStandard from './io.generated.model/NetCordaCoreNodeServicesVaultSortAttributeStandard';
+//import NetCordaCoreNodeServicesVaultSortSortColumn from './io.generated.model/NetCordaCoreNodeServicesVaultSortSortColumn';
+//import NetCordaCoreNodeServicesVaultStateMetadata from './io.generated.model/NetCordaCoreNodeServicesVaultStateMetadata';
+//import NetCordaCoreNodeServicesVaultUpdate from './io.generated.model/NetCordaCoreNodeServicesVaultUpdate';
 import NetCordaCoreSchemasCommonSchemaV1FungibleState from './io.generated.model/NetCordaCoreSchemasCommonSchemaV1FungibleState';
 import NetCordaCoreSchemasCommonSchemaV1LinearState from './io.generated.model/NetCordaCoreSchemasCommonSchemaV1LinearState';
 import NetCordaCoreSchemasPersistentState from './io.generated.model/NetCordaCoreSchemasPersistentState';
@@ -190,6 +190,12 @@ export {
     InvocationError,
 
     /**
+     * The IoBluebankBraidCordaServerProgressProgressNotification model constructor.
+     * @property {module:io.generated.model/IoBluebankBraidCordaServerProgressProgressNotification}
+     */
+    IoBluebankBraidCordaServerProgressProgressNotification,
+
+    /**
      * The IoBluebankBraidCordaServicesSimpleNodeInfo model constructor.
      * @property {module:io.generated.model/IoBluebankBraidCordaServicesSimpleNodeInfo}
      */
@@ -200,6 +206,12 @@ export {
      * @property {module:io.generated.model/IoBluebankBraidCordaServicesVaultVaultQuery}
      */
     IoBluebankBraidCordaServicesVaultVaultQuery,
+
+    /**
+     * The IoVertxExtAuthUser model constructor.
+     * @property {module:io.generated.model/IoVertxExtAuthUser}
+     */
+    IoVertxExtAuthUser,
 
     /**
      * The NetCordaCoreContextActor model constructor.
@@ -286,12 +298,6 @@ export {
     NetCordaCoreContractsContractState,
 
     /**
-     * The NetCordaCoreContractsLinearPointer model constructor.
-     * @property {module:io.generated.model/NetCordaCoreContractsLinearPointer}
-     */
-    NetCordaCoreContractsLinearPointer,
-
-    /**
      * The NetCordaCoreContractsPrivacySalt model constructor.
      * @property {module:io.generated.model/NetCordaCoreContractsPrivacySalt}
      */
@@ -310,22 +316,10 @@ export {
     NetCordaCoreContractsStateAndRefNetCordaCoreContractsContractState,
 
     /**
-     * The NetCordaCoreContractsStatePointer model constructor.
-     * @property {module:io.generated.model/NetCordaCoreContractsStatePointer}
-     */
-    NetCordaCoreContractsStatePointer,
-
-    /**
      * The NetCordaCoreContractsStateRef model constructor.
      * @property {module:io.generated.model/NetCordaCoreContractsStateRef}
      */
     NetCordaCoreContractsStateRef,
-
-    /**
-     * The NetCordaCoreContractsStaticPointer model constructor.
-     * @property {module:io.generated.model/NetCordaCoreContractsStaticPointer}
-     */
-    NetCordaCoreContractsStaticPointer,
 
     /**
      * The NetCordaCoreContractsTimeWindow model constructor.
@@ -346,10 +340,10 @@ export {
     NetCordaCoreContractsTransactionStateNetCordaCoreContractsContractState,
 
     /**
-     * The NetCordaCoreContractsUniqueIdentifier model constructor.
-     * @property {module:io.generated.model/NetCordaCoreContractsUniqueIdentifier}
+     * The NetCordaCoreCordappCordappInfo model constructor.
+     * @property {module:io.generated.model/NetCordaCoreCordappCordappInfo}
      */
-    NetCordaCoreContractsUniqueIdentifier,
+    NetCordaCoreCordappCordappInfo,
 
     /**
      * The NetCordaCoreCryptoDigitalSignature model constructor.
@@ -394,6 +388,12 @@ export {
     NetCordaCoreIdentityPartyAndCertificate,
 
     /**
+     * The NetCordaCoreNodeNodeDiagnosticInfo model constructor.
+     * @property {module:io.generated.model/NetCordaCoreNodeNodeDiagnosticInfo}
+     */
+    NetCordaCoreNodeNodeDiagnosticInfo,
+
+    /**
      * The NetCordaCoreNodeNodeInfo model constructor.
      * @property {module:io.generated.model/NetCordaCoreNodeNodeInfo}
      */
@@ -422,348 +422,348 @@ export {
      * @property {module:io.generated.model/NetCordaCoreNodeServicesNetworkMapCacheMapChangeRemoved}
      */
     NetCordaCoreNodeServicesNetworkMapCacheMapChangeRemoved,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVault model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVault}
-    //  */
-    // NetCordaCoreNodeServicesVault,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition}
-    //  */
-    // NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria}
-    //  */
-    // NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition}
-    //  */
-    // NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultAttachmentSort model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentSort}
-    //  */
-    // NetCordaCoreNodeServicesVaultAttachmentSort,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn}
-    //  */
-    // NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumn model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumn}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumn,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnObjectObject model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnObjectObject}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnObjectObject,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateBetween model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBetween}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateBetween,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateLikeness model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateLikeness}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateLikeness,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateNullExpression model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateNullExpression}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateNullExpression,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultConstraintInfo model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultConstraintInfo}
-    //  */
-    // NetCordaCoreNodeServicesVaultConstraintInfo,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression}
-    //  */
-    // NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical}
-    //  */
-    // NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression}
-    //  */
-    // NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultCriteriaExpressionNot model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionNot}
-    //  */
-    // NetCordaCoreNodeServicesVaultCriteriaExpressionNot,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultPage model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultPage}
-    //  */
-    // NetCordaCoreNodeServicesVaultPage,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState}
-    //  */
-    // NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultPageSpecification model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultPageSpecification}
-    //  */
-    // NetCordaCoreNodeServicesVaultPageSpecification,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf}
-    //  */
-    // NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultSort model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultSort}
-    //  */
-    // NetCordaCoreNodeServicesVaultSort,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultSortAttributeCustom model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultSortAttributeCustom}
-    //  */
-    // NetCordaCoreNodeServicesVaultSortAttributeCustom,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultSortAttributeStandard model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultSortAttributeStandard}
-    //  */
-    // NetCordaCoreNodeServicesVaultSortAttributeStandard,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultSortSortColumn model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultSortSortColumn}
-    //  */
-    // NetCordaCoreNodeServicesVaultSortSortColumn,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultStateMetadata model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultStateMetadata}
-    //  */
-    // NetCordaCoreNodeServicesVaultStateMetadata,
-
-    // /**
-    //  * The NetCordaCoreNodeServicesVaultUpdate model constructor.
-    //  * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultUpdate}
-    //  */
-    // NetCordaCoreNodeServicesVaultUpdate,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVault model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVault}
+//     */
+//    NetCordaCoreNodeServicesVault,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition}
+//     */
+//    NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAndComposition,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria}
+//     */
+//    NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaAttachmentsQueryCriteria,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition}
+//     */
+//    NetCordaCoreNodeServicesVaultAttachmentQueryCriteriaOrComposition,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultAttachmentSort model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentSort}
+//     */
+//    NetCordaCoreNodeServicesVaultAttachmentSort,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn}
+//     */
+//    NetCordaCoreNodeServicesVaultAttachmentSortAttachmentSortColumn,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumn model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumn}
+//     */
+//    NetCordaCoreNodeServicesVaultColumn,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnObjectObject model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnObjectObject}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnObjectObject,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunction,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateAggregateFunctionAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateBetween model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBetween}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateBetween,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateBetweenAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparison,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateBinaryComparisonAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpression,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateCollectionExpressionAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparison,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateEqualityComparisonAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateLikeness model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateLikeness}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateLikeness,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateLikenessAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateNullExpression model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateNullExpression}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateNullExpression,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultColumnPredicateNullExpressionAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultConstraintInfo model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultConstraintInfo}
+//     */
+//    NetCordaCoreNodeServicesVaultConstraintInfo,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression}
+//     */
+//    NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpression,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultCriteriaExpressionAggregateFunctionExpressionAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical}
+//     */
+//    NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogical,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultCriteriaExpressionBinaryLogicalAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression}
+//     */
+//    NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpression,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultCriteriaExpressionColumnPredicateExpressionAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultCriteriaExpressionNot model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionNot}
+//     */
+//    NetCordaCoreNodeServicesVaultCriteriaExpressionNot,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultCriteriaExpressionNotAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultPage model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultPage}
+//     */
+//    NetCordaCoreNodeServicesVaultPage,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState}
+//     */
+//    NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultPageSpecification model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultPageSpecification}
+//     */
+//    NetCordaCoreNodeServicesVaultPageSpecification,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaAndComposition,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaAndCompositionAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteria,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteria,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaOrComposition,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaSoftLockingCondition,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaTimeCondition,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteria,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaVaultCustomQueryCriteriaAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf}
+//     */
+//    NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultSort model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultSort}
+//     */
+//    NetCordaCoreNodeServicesVaultSort,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultSortAttributeCustom model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultSortAttributeCustom}
+//     */
+//    NetCordaCoreNodeServicesVaultSortAttributeCustom,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultSortAttributeStandard model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultSortAttributeStandard}
+//     */
+//    NetCordaCoreNodeServicesVaultSortAttributeStandard,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultSortSortColumn model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultSortSortColumn}
+//     */
+//    NetCordaCoreNodeServicesVaultSortSortColumn,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultStateMetadata model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultStateMetadata}
+//     */
+//    NetCordaCoreNodeServicesVaultStateMetadata,
+//
+//    /**
+//     * The NetCordaCoreNodeServicesVaultUpdate model constructor.
+//     * @property {module:io.generated.model/NetCordaCoreNodeServicesVaultUpdate}
+//     */
+//    NetCordaCoreNodeServicesVaultUpdate,
 
     /**
      * The NetCordaCoreSchemasCommonSchemaV1FungibleState model constructor.

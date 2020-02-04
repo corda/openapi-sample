@@ -82,6 +82,12 @@ class NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf {
             if (data.hasOwnProperty('participants')) {
                 obj['participants'] = ApiClient.convertToType(data['participants'], [NetCordaCoreIdentityAbstractParty]);
             }
+            if (data.hasOwnProperty('externalIds')) {
+                obj['externalIds'] = ApiClient.convertToType(data['externalIds'], ['String']);
+            }
+            if (data.hasOwnProperty('exactParticipants')) {
+                obj['exactParticipants'] = ApiClient.convertToType(data['exactParticipants'], [NetCordaCoreIdentityAbstractParty]);
+            }
         }
         return obj;
     }
@@ -138,6 +144,16 @@ NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf.prototype['con
  * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} participants
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf.prototype['participants'] = undefined;
+
+/**
+ * @member {Array.<String>} externalIds
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf.prototype['externalIds'] = undefined;
+
+/**
+ * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} exactParticipants
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf.prototype['exactParticipants'] = undefined;
 
 
 

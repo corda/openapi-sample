@@ -102,6 +102,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property exactParticipants (base name: "exactParticipants")', function() {
+      // uncomment below and update the code to test the property exactParticipants
+      //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf();
+      //expect(instance).to.be();
+    });
+
     it('should have the property constraintTypes (base name: "constraintTypes")', function() {
       // uncomment below and update the code to test the property constraintTypes
       //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf();
@@ -110,6 +116,12 @@
 
     it('should have the property constraints (base name: "constraints")', function() {
       // uncomment below and update the code to test the property constraints
+      //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property externalIds (base name: "externalIds")', function() {
+      // uncomment below and update the code to test the property externalIds
       //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaFungibleAssetQueryCriteriaAllOf();
       //expect(instance).to.be();
     });

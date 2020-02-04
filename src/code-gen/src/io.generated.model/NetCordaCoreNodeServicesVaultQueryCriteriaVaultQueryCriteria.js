@@ -49,6 +49,7 @@ class NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria {
         obj['relevancyStatus'] = relevancyStatus;
         obj['constraintTypes'] = constraintTypes;
         obj['constraints'] = constraints;
+        obj['externalIds'] = externalIds;
     }
 
     /**
@@ -97,6 +98,12 @@ class NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria {
             }
             if (data.hasOwnProperty('participants')) {
                 obj['participants'] = ApiClient.convertToType(data['participants'], [NetCordaCoreIdentityAbstractParty]);
+            }
+            if (data.hasOwnProperty('externalIds')) {
+                obj['externalIds'] = ApiClient.convertToType(data['externalIds'], ['String']);
+            }
+            if (data.hasOwnProperty('exactParticipants')) {
+                obj['exactParticipants'] = ApiClient.convertToType(data['exactParticipants'], [NetCordaCoreIdentityAbstractParty]);
             }
         }
         return obj;
@@ -155,6 +162,16 @@ NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria.prototype['constrai
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria.prototype['participants'] = undefined;
 
+/**
+ * @member {Array.<String>} externalIds
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria.prototype['externalIds'] = undefined;
+
+/**
+ * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} exactParticipants
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteria.prototype['exactParticipants'] = undefined;
+
 
 // Implement NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf interface:
 /**
@@ -197,6 +214,14 @@ NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf.prototype['con
  * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} participants
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf.prototype['participants'] = undefined;
+/**
+ * @member {Array.<String>} externalIds
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf.prototype['externalIds'] = undefined;
+/**
+ * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} exactParticipants
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaVaultQueryCriteriaAllOf.prototype['exactParticipants'] = undefined;
 
 
 

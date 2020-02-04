@@ -19,16 +19,14 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
-import UserProfile from "views/UserProfile/UserProfile.js";
 import TableList from "views/TableList/TableList.js";
-import Icons from "views/Icons/Icons.js";
 // core components/views for RTL layout
 
 const dashboardRoutes = [
 
   {
     path: "/table",
-    name: "Transactions",
+    name: "Ledger Transaction",
     icon: "content_paste",
     component: TableList,
     layout: "/admin"

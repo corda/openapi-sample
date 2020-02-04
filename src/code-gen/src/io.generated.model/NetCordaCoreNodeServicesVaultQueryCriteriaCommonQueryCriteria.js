@@ -45,6 +45,7 @@ class NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria {
         obj['relevancyStatus'] = relevancyStatus;
         obj['constraintTypes'] = constraintTypes;
         obj['constraints'] = constraints;
+        obj['externalIds'] = externalIds;
         obj['status'] = status;
     }
 
@@ -76,6 +77,12 @@ class NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria {
             }
             if (data.hasOwnProperty('participants')) {
                 obj['participants'] = ApiClient.convertToType(data['participants'], [NetCordaCoreIdentityAbstractParty]);
+            }
+            if (data.hasOwnProperty('externalIds')) {
+                obj['externalIds'] = ApiClient.convertToType(data['externalIds'], ['String']);
+            }
+            if (data.hasOwnProperty('exactParticipants')) {
+                obj['exactParticipants'] = ApiClient.convertToType(data['exactParticipants'], [NetCordaCoreIdentityAbstractParty]);
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -111,6 +118,16 @@ NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria.prototype['constra
 NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria.prototype['participants'] = undefined;
 
 /**
+ * @member {Array.<String>} externalIds
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria.prototype['externalIds'] = undefined;
+
+/**
+ * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} exactParticipants
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria.prototype['exactParticipants'] = undefined;
+
+/**
  * @member {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria.StatusEnum} status
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteria.prototype['status'] = undefined;
@@ -138,6 +155,14 @@ NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf.prototype['co
  * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} participants
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf.prototype['participants'] = undefined;
+/**
+ * @member {Array.<String>} externalIds
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf.prototype['externalIds'] = undefined;
+/**
+ * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} exactParticipants
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf.prototype['exactParticipants'] = undefined;
 /**
  * @member {module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf.StatusEnum} status
  */

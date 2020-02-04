@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import GeneratedBootcampTokenIssueFlowInitiatorPayload from '../io.generated.model/GeneratedBootcampTokenIssueFlowInitiatorPayload';
 import InvocationError from '../io.generated.model/InvocationError';
+import IoBluebankBraidCordaServerProgressProgressNotification from '../io.generated.model/IoBluebankBraidCordaServerProgressProgressNotification';
 import NetCordaCoreTransactionsSignedTransaction from '../io.generated.model/NetCordaCoreTransactionsSignedTransaction';
 
 /**
@@ -81,10 +82,13 @@ export default class CordappsApi {
 
     /**
      * @param {Object} body payload
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.invocationId 
      * @param {module:io.generated.api/CordappsApi~cordappsBootcampOpenapiFlowsBootcampGetAllTokensFlowCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     cordappsBootcampOpenapiFlowsBootcampGetAllTokensFlow(body, callback) {
+      let opts = {};
       let postBody = body;
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
@@ -96,6 +100,7 @@ export default class CordappsApi {
       let queryParams = {
       };
       let headerParams = {
+        'invocation-id': opts['invocationId']
       };
       let formParams = {
       };
@@ -121,10 +126,13 @@ export default class CordappsApi {
 
     /**
      * @param {module:io.generated.model/GeneratedBootcampTokenIssueFlowInitiatorPayload} generatedBootcampTokenIssueFlowInitiatorPayload payload
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.invocationId 
      * @param {module:io.generated.api/CordappsApi~cordappsBootcampOpenapiFlowsBootcampTokenIssueFlowInitiatorCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:io.generated.model/NetCordaCoreTransactionsSignedTransaction}
      */
     cordappsBootcampOpenapiFlowsBootcampTokenIssueFlowInitiator(generatedBootcampTokenIssueFlowInitiatorPayload, callback) {
+      let opts = {};
       let postBody = generatedBootcampTokenIssueFlowInitiatorPayload;
       // verify the required parameter 'generatedBootcampTokenIssueFlowInitiatorPayload' is set
       if (generatedBootcampTokenIssueFlowInitiatorPayload === undefined || generatedBootcampTokenIssueFlowInitiatorPayload === null) {
@@ -136,6 +144,7 @@ export default class CordappsApi {
       let queryParams = {
       };
       let headerParams = {
+        'invocation-id': opts['invocationId']
       };
       let formParams = {
       };
@@ -187,6 +196,42 @@ export default class CordappsApi {
       let returnType = ['String'];
       return this.apiClient.callApi(
         '/cordapps/{cordapp}/flows', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cordappsProgressTracker operation.
+     * @callback module:io.generated.api/CordappsApi~cordappsProgressTrackerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:io.generated.model/IoBluebankBraidCordaServerProgressProgressNotification} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Connect to the Progress Tracker. This call will return chunked responses of all progress trackers
+     * @param {module:io.generated.api/CordappsApi~cordappsProgressTrackerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:io.generated.model/IoBluebankBraidCordaServerProgressProgressNotification}
+     */
+    cordappsProgressTracker(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = IoBluebankBraidCordaServerProgressProgressNotification;
+      return this.apiClient.callApi(
+        '/cordapps/progress-tracker', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

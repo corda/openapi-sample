@@ -12,8 +12,10 @@ Name | Type | Description | Notes
 **status** | **String** |  | 
 **contractStateTypes** | **[String]** |  | [optional] 
 **relevancyStatus** | **String** |  | 
+**exactParticipants** | [**[NetCordaCoreIdentityAbstractParty]**](NetCordaCoreIdentityAbstractParty.md) |  | [optional] 
 **constraintTypes** | **[String]** |  | 
 **constraints** | [**[NetCordaCoreNodeServicesVaultConstraintInfo]**](NetCordaCoreNodeServicesVaultConstraintInfo.md) |  | 
+**externalIds** | **[String]** |  | 
 
 
 

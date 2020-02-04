@@ -78,14 +78,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property contractStateTypes (base name: "contractStateTypes")', function() {
-      // uncomment below and update the code to test the property contractStateTypes
+    it('should have the property externalIds (base name: "externalIds")', function() {
+      // uncomment below and update the code to test the property externalIds
+      //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property exactParticipants (base name: "exactParticipants")', function() {
+      // uncomment below and update the code to test the property exactParticipants
       //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
+      //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property contractStateTypes (base name: "contractStateTypes")', function() {
+      // uncomment below and update the code to test the property contractStateTypes
       //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaCommonQueryCriteriaAllOf();
       //expect(instance).to.be();
     });

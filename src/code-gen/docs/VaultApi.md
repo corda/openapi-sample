@@ -1,6 +1,6 @@
 # OpenapiJsClient.VaultApi
 
-All URIs are relative to *http://localhost:10200/api/rest*
+All URIs are relative to *http://localhost:9004/api/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,6 +15,8 @@ Method | HTTP request | Description
 
 
 
+Queries the vault for contract states of the supplied type
+
 ### Example
 
 ```javascript
@@ -22,7 +24,7 @@ import OpenapiJsClient from 'openapi-js-client';
 
 let apiInstance = new OpenapiJsClient.VaultApi();
 let opts = {
-  'contractStateType': java.lang.Object // String | 
+  'contractStateType': "contractStateType_example" // String | 
 };
 apiInstance.vaultVaultQuery(opts, (error, data, response) => {
   if (error) {
@@ -56,9 +58,11 @@ No authorization required
 
 ## vaultVaultQueryBy
 
-> NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState vaultVaultQueryBy(ioBluebankBraidCordaServicesVaultVaultQuery)
+> NetCordaCoreNodeServicesVaultPageNetCordaCoreContractsContractState vaultVaultQueryBy(ioVertxExtAuthUser, opts)
 
 
+
+Queries the vault
 
 ### Example
 
@@ -66,8 +70,11 @@ No authorization required
 import OpenapiJsClient from 'openapi-js-client';
 
 let apiInstance = new OpenapiJsClient.VaultApi();
-let ioBluebankBraidCordaServicesVaultVaultQuery = new OpenapiJsClient.IoBluebankBraidCordaServicesVaultVaultQuery(); // IoBluebankBraidCordaServicesVaultVaultQuery | vault
-apiInstance.vaultVaultQueryBy(ioBluebankBraidCordaServicesVaultVaultQuery, (error, data, response) => {
+let ioVertxExtAuthUser = new OpenapiJsClient.IoVertxExtAuthUser(); // IoVertxExtAuthUser | user
+let opts = {
+  'vault': new OpenapiJsClient.IoBluebankBraidCordaServicesVaultVaultQuery() // IoBluebankBraidCordaServicesVaultVaultQuery | 
+};
+apiInstance.vaultVaultQueryBy(ioVertxExtAuthUser, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -81,7 +88,8 @@ apiInstance.vaultVaultQueryBy(ioBluebankBraidCordaServicesVaultVaultQuery, (erro
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ioBluebankBraidCordaServicesVaultVaultQuery** | [**IoBluebankBraidCordaServicesVaultVaultQuery**](IoBluebankBraidCordaServicesVaultVaultQuery.md)| vault | 
+ **ioVertxExtAuthUser** | [**IoVertxExtAuthUser**](IoVertxExtAuthUser.md)| user | 
+ **vault** | [**IoBluebankBraidCordaServicesVaultVaultQuery**](.md)|  | [optional] 
 
 ### Return type
 

@@ -23,10 +23,12 @@ class GeneratedBootcampTokenIssueFlowInitiatorPayload {
     /**
      * Constructs a new <code>GeneratedBootcampTokenIssueFlowInitiatorPayload</code>.
      * @alias module:io.generated.model/GeneratedBootcampTokenIssueFlowInitiatorPayload
+     * @param owner {module:io.generated.model/NetCordaCoreIdentityParty} 
+     * @param amount {Number} 
      */
-    constructor() { 
+    constructor(owner, amount) { 
         
-        GeneratedBootcampTokenIssueFlowInitiatorPayload.initialize(this);
+        GeneratedBootcampTokenIssueFlowInitiatorPayload.initialize(this, owner, amount);
     }
 
     /**
@@ -34,7 +36,9 @@ class GeneratedBootcampTokenIssueFlowInitiatorPayload {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, owner, amount) { 
+        obj['owner'] = owner;
+        obj['amount'] = amount;
     }
 
     /**

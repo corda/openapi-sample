@@ -96,6 +96,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property externalIds (base name: "externalIds")', function() {
+      // uncomment below and update the code to test the property externalIds
+      //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property exactParticipants (base name: "exactParticipants")', function() {
+      // uncomment below and update the code to test the property exactParticipants
+      //var instane = new OpenapiJsClient.NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

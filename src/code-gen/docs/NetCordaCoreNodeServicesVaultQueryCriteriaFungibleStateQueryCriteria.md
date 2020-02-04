@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **relevancyStatus** | **String** |  | 
 **constraintTypes** | **[String]** |  | 
 **constraints** | [**[NetCordaCoreNodeServicesVaultConstraintInfo]**](NetCordaCoreNodeServicesVaultConstraintInfo.md) |  | 
+**externalIds** | **[String]** |  | 
+**exactParticipants** | [**[NetCordaCoreIdentityAbstractParty]**](NetCordaCoreIdentityAbstractParty.md) |  | [optional] 
 
 
 

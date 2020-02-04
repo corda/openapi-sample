@@ -45,6 +45,7 @@ export default class NetworkApi {
      */
 
     /**
+     * Retrieves all nodes if neither query parameter is supplied. Otherwise returns a list of one node matching the supplied query parameter.
      * @param {Object} opts Optional parameters
      * @param {String} opts.hostAndPort 
      * @param {String} opts.x500Name 
@@ -59,7 +60,7 @@ export default class NetworkApi {
       };
       let queryParams = {
         'host-and-port': opts['hostAndPort'],
-        'x500-name': opts['x500-name']
+        'x500-name': opts['x500Name']
       };
       let headerParams = {
       };
@@ -86,6 +87,7 @@ export default class NetworkApi {
      */
 
     /**
+     * Retrieves all nodes if neither query parameter is supplied. Otherwise returns a list of one node matching the supplied query parameter.
      * @param {module:io.generated.api/NetworkApi~networkNodesSelfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:io.generated.model/IoBluebankBraidCordaServicesSimpleNodeInfo}
      */
@@ -133,7 +135,7 @@ export default class NetworkApi {
       let pathParams = {
       };
       let queryParams = {
-        'x500-name': opts['x500-name']
+        'x500-name': opts['x500Name']
       };
       let headerParams = {
       };

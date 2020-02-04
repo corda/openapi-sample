@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **constraintTypes** | **[String]** |  | [optional] 
 **constraints** | [**[NetCordaCoreNodeServicesVaultConstraintInfo]**](NetCordaCoreNodeServicesVaultConstraintInfo.md) |  | [optional] 
 **participants** | [**[NetCordaCoreIdentityAbstractParty]**](NetCordaCoreIdentityAbstractParty.md) |  | [optional] 
+**externalIds** | **[String]** |  | [optional] 
+**exactParticipants** | [**[NetCordaCoreIdentityAbstractParty]**](NetCordaCoreIdentityAbstractParty.md) |  | [optional] 
 **status** | **String** |  | [optional] 
 **contractStateTypes** | **[String]** |  | [optional] 
 

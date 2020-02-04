@@ -32,9 +32,9 @@ class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default http://localhost:10200/api/rest
+         * @default http://localhost:9004/api/rest
          */
-        this.basePath = 'http://localhost:10200/api/rest'.replace(/\/+$/, '');
+        this.basePath = 'http://localhost:9004/api/rest'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
@@ -552,7 +552,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "http://localhost:10200/api/rest",
+              'url': "http://localhost:9004/api/rest",
               'description': "No description provided",
             }
       ];

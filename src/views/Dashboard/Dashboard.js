@@ -59,9 +59,6 @@ export class Dashboard extends Component {
   componentDidMount() {
     const netapi = new NetworkApi(new ApiClient());
     netapi.networkNodes({}, (error, data, response) => {
-      console.log("hello, is it me ...")
-      //console.log(JSON.stringify(response));
-      //console.log(data[0].legalIdentities[0].name);
       this.setState({
         NetworkParties: data
       });
@@ -70,13 +67,6 @@ export class Dashboard extends Component {
 
 
   componentDidUpdate() {
-
-    // fetch('http://localhost:10009/api/iou/peers')
-    // .then(res => res.json())
-    // .then((data) => {
-    //   this.setState({ NetworkParties: data.peers })
-    // })
-    // .catch(console.log)
   }
 
 

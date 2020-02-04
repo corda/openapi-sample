@@ -48,6 +48,7 @@ class NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria {
         obj['relevancyStatus'] = relevancyStatus;
         obj['constraintTypes'] = constraintTypes;
         obj['constraints'] = constraints;
+        obj['externalIds'] = externalIds;
     }
 
     /**
@@ -87,11 +88,17 @@ class NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria {
             if (data.hasOwnProperty('relevancyStatus')) {
                 obj['relevancyStatus'] = ApiClient.convertToType(data['relevancyStatus'], 'String');
             }
+            if (data.hasOwnProperty('exactParticipants')) {
+                obj['exactParticipants'] = ApiClient.convertToType(data['exactParticipants'], [NetCordaCoreIdentityAbstractParty]);
+            }
             if (data.hasOwnProperty('constraintTypes')) {
                 obj['constraintTypes'] = ApiClient.convertToType(data['constraintTypes'], ['String']);
             }
             if (data.hasOwnProperty('constraints')) {
                 obj['constraints'] = ApiClient.convertToType(data['constraints'], [NetCordaCoreNodeServicesVaultConstraintInfo]);
+            }
+            if (data.hasOwnProperty('externalIds')) {
+                obj['externalIds'] = ApiClient.convertToType(data['externalIds'], ['String']);
             }
         }
         return obj;
@@ -131,6 +138,11 @@ NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria.prototype['co
 NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria.prototype['relevancyStatus'] = undefined;
 
 /**
+ * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} exactParticipants
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria.prototype['exactParticipants'] = undefined;
+
+/**
  * @member {Array.<module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria.ConstraintTypesEnum>} constraintTypes
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria.prototype['constraintTypes'] = undefined;
@@ -139,6 +151,11 @@ NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria.prototype['co
  * @member {Array.<module:io.generated.model/NetCordaCoreNodeServicesVaultConstraintInfo>} constraints
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria.prototype['constraints'] = undefined;
+
+/**
+ * @member {Array.<String>} externalIds
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteria.prototype['externalIds'] = undefined;
 
 
 // Implement NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf interface:
@@ -167,6 +184,10 @@ NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf.prototyp
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf.prototype['relevancyStatus'] = undefined;
 /**
+ * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} exactParticipants
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf.prototype['exactParticipants'] = undefined;
+/**
  * @member {Array.<module:io.generated.model/NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf.ConstraintTypesEnum>} constraintTypes
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf.prototype['constraintTypes'] = undefined;
@@ -174,6 +195,10 @@ NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf.prototyp
  * @member {Array.<module:io.generated.model/NetCordaCoreNodeServicesVaultConstraintInfo>} constraints
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf.prototype['constraints'] = undefined;
+/**
+ * @member {Array.<String>} externalIds
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaLinearStateQueryCriteriaAllOf.prototype['externalIds'] = undefined;
 
 
 

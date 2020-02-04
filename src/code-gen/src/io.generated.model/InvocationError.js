@@ -21,6 +21,7 @@ import ApiClient from '../ApiClient';
 class InvocationError {
     /**
      * Constructs a new <code>InvocationError</code>.
+     * Any errors returned by the Progress tracker observable
      * @alias module:io.generated.model/InvocationError
      * @param message {String} the error message
      * @param type {String} the type of error

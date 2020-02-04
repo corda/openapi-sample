@@ -70,6 +70,12 @@ class NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf 
             if (data.hasOwnProperty('constraints')) {
                 obj['constraints'] = ApiClient.convertToType(data['constraints'], [NetCordaCoreNodeServicesVaultConstraintInfo]);
             }
+            if (data.hasOwnProperty('externalIds')) {
+                obj['externalIds'] = ApiClient.convertToType(data['externalIds'], ['String']);
+            }
+            if (data.hasOwnProperty('exactParticipants')) {
+                obj['exactParticipants'] = ApiClient.convertToType(data['exactParticipants'], [NetCordaCoreIdentityAbstractParty]);
+            }
         }
         return obj;
     }
@@ -111,6 +117,16 @@ NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf.protot
  * @member {Array.<module:io.generated.model/NetCordaCoreNodeServicesVaultConstraintInfo>} constraints
  */
 NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf.prototype['constraints'] = undefined;
+
+/**
+ * @member {Array.<String>} externalIds
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf.prototype['externalIds'] = undefined;
+
+/**
+ * @member {Array.<module:io.generated.model/NetCordaCoreIdentityAbstractParty>} exactParticipants
+ */
+NetCordaCoreNodeServicesVaultQueryCriteriaFungibleStateQueryCriteriaAllOf.prototype['exactParticipants'] = undefined;
 
 
 
