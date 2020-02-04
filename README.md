@@ -6,13 +6,15 @@
 ## Introduction
 
 This sample is a developer preview of setting up a React front-end using Braid server and OpenAPI generator. 
-Project Braid is a web server which can automatically detect Corda flows and generate api template in json format. Then, we can use OpenAPI generator to transalate into API libraries in more than 40+ different languages, including javascript, GO, Ruby, and etc.
+Project Braid is a web server which can automatically detect Corda flows and generate api template in json format. Then, we can use OpenAPI generator to transalate into API libraries in more than 40+ different languages, including javascript, GO, Ruby, and etc. Read this blog to have an overview of Braid: https://medium.com/corda/a-road-to-less-coding-auto-generate-apilibrary-bcbe2def7b30
 
 More information about Braid and OpenApi generator can be found at:
 
 Braid: https://gitlab.com/bluebank/braid
 
 OpenApi-generator: https://github.com/OpenAPITools/openapi-generator
+
+
 
 ## Tools you need
 - Nodejs : https://nodejs.org/en/download/
